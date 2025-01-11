@@ -18,5 +18,4 @@ RUN --mount=type=bind,from=akmods,src=/rpms/ublue-os,dst=/tmp/rpms/akmods \
     mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     dnf clean all && \
-    #ostree container commit && \ TEST WITH THIS DISABLED
     bootc container lint
