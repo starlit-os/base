@@ -11,6 +11,7 @@ FROM ${CONFIG} AS config
 FROM quay.io/fedora/fedora-bootc:$FEDORA_VERSION
 
 COPY build_files/*.sh /tmp
+COPY sys_files/* /
 
 RUN --mount=type=bind,from=akmods,src=/rpms/ublue-os,dst=/tmp/rpms/akmods \
     --mount=type=bind,from=config,src=/rpms,dst=/tmp/rpms/config \
