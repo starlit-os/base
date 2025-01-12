@@ -6,4 +6,3 @@ set -ouex pipefail
 systemctl enable podman.socket
 systemctl enable rpm-ostreed-automatic.timer
 systemctl enable tailscaled.service
-systemctl enable docker.service
